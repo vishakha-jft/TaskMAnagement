@@ -28,10 +28,6 @@ public class SecurityConfig{
         httpSecurity
                 .formLogin(Customizer.withDefaults())
                 .logout(LogoutConfigurer::permitAll);
-//        httpSecurity
-//                .formLogin()
-//               .successForwardUrl("/home").logout();
-
 
         httpSecurity.authenticationProvider(daoAuthenticationProvider());
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
